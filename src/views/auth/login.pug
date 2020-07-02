@@ -1,0 +1,20 @@
+h1 Login
+
+if (errors)
+  ul
+    each error in errors
+      li(style="color: red;") #{error}
+
+form(action="/auth/login" method="post")
+  
+  div
+    label(for="email") email: 
+    input(type="email" id="email" name="email")
+
+  div
+    label(for="password") password: 
+    input(type="password" id="password" name="password")
+
+  button(type="submit") Login
+
+a(href="/auth/register") Register
